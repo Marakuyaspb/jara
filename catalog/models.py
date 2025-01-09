@@ -2,7 +2,7 @@ from django.db import models
 
 class Brand(models.Model):
 	id_brand = models.AutoField(primary_key=True)
-	brand = models.CharField(max_length=30, verbose_name='Марка', default='Audi')
+	brand = models.CharField(max_length=20, verbose_name='Марка', default='Haier')
 	class Meta:
 		ordering = ['brand']
 		indexes = [
@@ -22,11 +22,22 @@ class Product(models.Model):
 		related_name='brands',
 		on_delete=models.CASCADE, verbose_name = 'Марка', null=True)
 
-	name = models.CharField(max_length=200, null=True, blank=True, verbose_name = 'Название модели')
+	the_model = models.CharField(max_length=100, null=True, blank=True, verbose_name = 'Название модели')
+	seria = models.CharField(max_length=150, null=True, blank=True, verbose_name = 'Серия')
+
 	price = models.IntegerField(null=True, blank=True, verbose_name = 'Цена')
 	price_old = models.IntegerField(null=True, blank=True, verbose_name = 'Цена БЕЗ скидки')
-	noise = models.CharField(max_length=20, null=True, blank=True, verbose_name = '')
-	power_max = models.CharField(max_length=20, null=True, blank=True, verbose_name = '')
-	power_min = models.CharField(max_length=20, null=True, blank=True, verbose_name = '')
-	work_inside = models.CharField(max_length=20, null=True, blank=True, verbose_name = '')
-	work_outside = models.CharField(max_length=20, null=True, blank=True, verbose_name = '')
+
+	power_cold = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Охлаждение, Вт')
+	power_warm = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Нагрев, Вт')
+	square = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Площадь')
+	temp_cold = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Охлаждение (С°)')
+	temp_warm = models.CharField(max_length=20, null=True, blank=True, verbose_name = 'Нагрев (С°)')
+	features = models.TextField(null=True, blank=True, verbose_name = 'Особенности')
+
+	img_1 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 1')
+	img_2 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 2')
+	img_3 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 3')
+	img_4 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 4')
+	img_5 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 5')
+	

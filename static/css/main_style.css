@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap")
+
+:root{
+  --black:rgb(5, 5, 5);
+  --gray:rgb(16,27,34);
+  --orange:rgb(211, 94, 53);
+  --violet:rgb(80, 84, 98);
+  --violet_dark:rgb(61, 66, 81);
+  --violet_light:rgb(202, 203, 213);
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	font-family: "Raleway", serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Comfortaa", serif;
+	font-weight: 700;
+}
+
+h1{
+	font-size: 2em;
+}
+
+.small{
+	font-size: 0.8em;
+}
+
+
+.card_title{
+	background: rgba(16,27,34,0.73);
+	opacity: 1;
+	padding: 6px 15px 6px 15px;
+	box-shadow: none;
+	border: 0px solid rgba(255,255,255,0);
+	border-radius: 3px;
+}

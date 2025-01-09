@@ -1,0 +1,69 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section class=''>
+	<div class='row'>
+		<p class='d-block d-lg-none ps-5 pt-3 pb-1'><a href='{% url "catalog:catalog" %}' class='small gray'>Каталог /</a> <span class='small gray'>{{ the_product.brand }}</span></p>
+
+		<div class='col-md-7 pb-4'>
+			{% include 'parts/carousel_the_product.html' %}
+		</div>
+
+		<div class='col-md-5 pb-4 ps-5'>
+
+			<div class=''>
+
+				<p class='d-none d-lg-block d-xl-block d-xxl-block pb-4'><a href='{% url "catalog:catalog" %}' class='small gray'>Каталог /</a> <span class='small gray'>{{ the_product.brand }}</span></p>
+
+				
+				<h1 class=''>Модель: {{ the_product.the_model }}</h1>
+				<h1 class=''>Серия: {{ the_product.seria }}</h1>
+
+				<h3 class='pt-2 pb-4'>{{ the_product.price }} ₽</h3>
+
+				<table>
+					<tbody class='the_product_info'>
+						<tr>
+							<td><span class='we_500 pe-5'>:</span></td>
+							<td>{{ the_product.power_cold }}</td>
+						</tr>
+						<tr>
+							<td><span class='we_500 pe-5'>:</span></td>
+							<td>{{ the_product.power_warm }}</td>
+						</tr>
+						<tr>
+							<td><span class='we_500 pe-5'>:</span></td>
+							<td>{{ the_product.square }} </td>
+						</tr>
+						<tr>
+							<td><span class='we_500 pe-5'>:</span></td>
+							<td>{{ the_product.temp_cold }}</td>
+						</tr>
+						<tr>
+							<td><span class='we_500 pe-5'>:</span></td>
+							<td>{{ the_product.temp_warm }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3 class=''>Особенности</h3>
+				<p> {{ the_product.features|linebreaks }} </p>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	{% include 'parts/carousel_all.html' %}
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src='{% static "js/thumbnail_gallery.js" %}'></script>
+
+{% endblock %}
