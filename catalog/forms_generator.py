@@ -36,15 +36,15 @@ def handle_callme_form(request):
 # WANT THIS
 def handle_want_this_form(request):
 	if request.method == 'POST':
-        the_model = request.POST.get('the_model')
-        want_this_form = WantThisForm(request.POST)
+		the_model = request.POST.get('the_model')
+		want_this_form = WantThisForm(request.POST)
 
-        if want_this_form.is_valid(): 
-            want_this = want_this_form.save(commit=False)
-            want_this.the_model = the_model
-            want_this.save()
+		if want_this_form.is_valid(): 
+			want_this = want_this_form.save(commit=False)
+			want_this.the_model = the_model
+			want_this.save()
 
-            name = want_this_form.cleaned_data['name']
+			name = want_this_form.cleaned_data['name']
 			phone = want_this_form.cleaned_data['phone']
 
 			subject = f"Заявка на звонок от {name} с сайта SPB-JARA.NET"
@@ -62,7 +62,7 @@ def handle_want_this_form(request):
 
 
 def handle_fix_it_form(request):
-		if request.method == 'POST':
+	if request.method == 'POST':
 		form_type = request.POST.get('form_type')
 		fix_it_form = FixItForm(request.POST)
 

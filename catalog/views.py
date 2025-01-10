@@ -30,14 +30,14 @@ def catalog(request):
 	return render(request, 'catalog.html', context)
 
 
- def the_product(request, id):
- 	if id:
+def the_product(request, id):
+	if id:
 		the_car = get_object_or_404(Car, id=id)
-    
-    callme_form = CallMeForm()
-	want_this_form = WantThisForm()
 
-	want_this = None
+		callme_form = CallMeForm()
+		want_this_form = WantThisForm()
+
+		want_this = None
 
 	if request.method == 'POST':
 		form_type = request.POST.get('form_type')
@@ -52,6 +52,4 @@ def catalog(request):
 		'want_this_form': want_this_form,
 	}
 
-    return render(request, 'catalog.html', {'callme_form': callme_form})
-
-
+	return render(request, 'catalog.html', {'callme_form': callme_form})

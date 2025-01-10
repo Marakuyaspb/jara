@@ -6,10 +6,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.template.loader import get_template, render_to_string
 from django.urls import reverse
 
-from cars.models import *
-from cars.forms import *
-from cars.forms_generator import *
-from cars.tasks import * 
+from catalog.models import *
+from catalog.forms import *
+from catalog.forms_generator import *
 
 
 def custom_404_view(request, exception):
@@ -20,17 +19,12 @@ def custom_500_view(request):
 
 
 def index(request):
-	cars = Car.objects.all()
-	new_cars = Car.objects.filter(status=1)
-	used_cars = Car.objects.filter(status=2)
 
 	callme_form = handle_callme_form(request)
 
 	context = {
 		'callme_form': callme_form,
-		'cars' : cars,
-		'new_cars': new_cars,
-		'used_cars': used_cars,
+
 	}
 	return render(request, 'main/index.html', context)
 
@@ -103,3 +97,7 @@ def ventilation(request):
 		'callme_form': callme_form,
 	}
 	return render(request, 'main/ventilation.html', context)
+
+
+def privacy(request):
+	return render(request, 'main/privacy.html')

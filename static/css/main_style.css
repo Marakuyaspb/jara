@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap")
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('http://127.0.0.1:8000/static/fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('http://127.0.0.1:8000/static/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
 
 :root{
   --black:rgb(5, 5, 5);
@@ -15,7 +28,7 @@ html{
 }
 
 body{
-	font-family: "Raleway", serif;
+	font-family: "Raleway", serif!important;
 	font-weight: 300;
 	font-style: normal;
 }
@@ -33,6 +46,64 @@ h1{
 	font-size: 0.8em;
 }
 
+
+
+/**/ /**/ /**/
+/* PALETTE */
+/**/ /**/ /**/ 
+
+
+.black{
+	color: var(--black);
+}
+.black_bg{
+	background-color: var(--black);
+}
+
+.gray{
+	color: var(--gray);
+}
+.gray_bg{
+	background-color: var(--gray);
+}
+
+.orange{
+	color: var(--orange);
+}
+.orange_bg{
+	background-color: var(--orange);
+}
+
+.violet{
+	color: var(--violet);
+}
+.violet_bg{
+	background-color: var(--violet);
+}
+
+.violet_dark{
+	color: var(--violet_dark);
+}
+.violet_dark_bg{
+	background-color: var(--violet_dark);
+}
+
+.violet_light{
+	color: var(--violet_light);
+}
+.violet_light_bg{
+	background-color: var(--violet_light);
+}
+
+/**/ /**/ /**/
+/**/ /**/ /**/
+
+
+
+.desctop_84{
+  width: 84%;
+  margin: .5em auto;
+}
 
 .card_title{
 	background: rgba(16,27,34,0.73);

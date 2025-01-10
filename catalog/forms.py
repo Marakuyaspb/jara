@@ -15,7 +15,7 @@ class CallMeForm(forms.ModelForm):
 
 class WantThisForm(forms.ModelForm):
 	class Meta:
-		model = WantThisCar
+		model = WantThis
 		fields = ['first_name', 'phone', 'the_model']
 		labels = {
 			'first_name': 'Имя',
@@ -30,7 +30,7 @@ class WantThisForm(forms.ModelForm):
 
 class FixItForm(forms.ModelForm):
 	class Meta:
-		model = CallMe
+		model = FixIt
 		fields = ['first_name', 'phone', 'problem']
 		labels = {
 			'first_name': 'Имя',

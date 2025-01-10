@@ -41,3 +41,52 @@ class Product(models.Model):
 	img_4 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 4')
 	img_5 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 5')
 	
+
+
+
+
+class CallMe(models.Model):
+	id = models.AutoField(primary_key=True)
+	first_name = models.CharField(max_length=30)
+	phone = models.CharField(max_length=30)
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
+
+	class Meta:
+		ordering = ['-created']
+		verbose_name = 'Заявка: перезвоните мне'
+		verbose_name_plural = 'Заявки: перезвоните мне'
+	def __str__(self):
+		return self.first_name
+
+
+
+class WantThis(models.Model):
+	id = models.AutoField(primary_key=True)
+	the_model = models.CharField(max_length=50, verbose_name = 'Марка машины')
+	first_name = models.CharField(max_length=30, verbose_name = 'Имя')
+	phone = models.CharField(max_length=30, verbose_name = 'Телефон')
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
+	
+	class Meta:
+		ordering = ['-created']
+		verbose_name = 'Хочу такой же'
+		verbose_name_plural = 'Запросы: хочу такой же!'
+
+	def __str__(self):
+		return self.first_name
+
+
+
+class FixIt(models.Model):
+	id = models.AutoField(primary_key=True)
+	first_name = models.CharField(max_length=30)
+	phone = models.CharField(max_length=30, null=True, blank=True)
+	problem = models.TextField()
+	created = models.DateTimeField(auto_now_add=True, verbose_name = 'Заявка поступила')
+
+	class Meta:
+		ordering = ['-created']
+		verbose_name = 'Заявка: перезвоните мне'
+		verbose_name_plural = 'Заявки: перезвоните мне'
+	def __str__(self):
+		return self.first_name
