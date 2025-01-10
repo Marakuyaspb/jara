@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<div class='modal_container' onclick='showModal(this);'>
+    
+  <button class='thumb button_form_base mt-3 mb-4 black'>Заказать звонок</button>
+
+    <div class='modal_full hide'>  
+      <div class=''>
+
+        
+        <form method="post" class="callme_container white_dirty_bg">
+
+          <div class='d-flex flex-row-reverse pe-3'>
+            <span class="close" onclick="closeModal(this);">&times;</span>
+          </div>
+        
+          <center>
+            <img class='popup_big_logo' src='{% static "brand/logo.svg" %}'>
+          </center>
+
+          <div class='form_container we_300'>
+
+
+            <label class="d-flex justify-content-start" for="{{ callme_form.first_name.id_for_label }}">{{ callme_form.first_name.label }}</label>
+            {{ callme_form.first_name }}
+
+            <label  class="d-flex justify-content-start pt-2" for="{{ callme_form.phone.id_for_label }}">{{ callme_form.phone.label }}</label>
+            {{ callme_form.phone }}
+            
+            {% csrf_token %}
+
+            <input type="hidden" name="form_type" value="call_me">
+            <center class='pt-5 pb-3'><input type="submit" value="Получить консультацию" class="button_dark"></center>
+
+            <p class='pt-3 smaller'>* Нажимая на кнопку "Получить консультацию",<br>Вы соглашаетесь с <u><a class='gray_dark' href='{% url "main:privacy" %}'>Политикой конфиденциальности</a></u>.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>

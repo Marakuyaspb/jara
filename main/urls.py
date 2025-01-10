@@ -21,7 +21,8 @@ urlpatterns = [
     path('service/', views.service, name = 'service'),
     path('stock/', views.stock, name = 'stock'),
     path('ventilation/', views.ventilation, name = 'ventilation'),
-
+    path('privacy/', views.privacy, name = 'privacy'),
+    
 ]
 
 
