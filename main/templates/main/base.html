@@ -41,9 +41,10 @@
           
           <a class="" href='{% url "main:index" %}'>   
             <div class="d-flex justify-content-start">
-                <div><img class='logo p-2' src='{% static "brand/logo.svg" %}'></div>         
-                <div>
-                  <span>Кондиционеры Янтарный климат</span>
+                <div><img class='logo p-2' src='{% static "img/logo.png" %}'></div>         
+                <div class='black pt-4'>
+                  <strong>Кондиционеры Янтарный климат</strong>
+                  <br>
                   <span class='small'>+7(911)768-29-92  ·  info@spb-jara.net</span>
                 </div>
             </div>
@@ -77,7 +78,7 @@
         
         <a class="navbar-brand" href='{% url "main:index" %}'> 
           <div class='d-flex'>  
-            <div><img class='logo_mob  mt-3' src='{% static "brand/logo.svg" %}'></div>
+            <div><img class='logo_mob  mt-3' src='{% static "img/logo.png" %}'></div>
           </div>
         </a>
 
@@ -132,38 +133,38 @@
 {% endblock %}
 
 
-<!-- DESCTOP FOOTER -->
-  <footer class='py-4 '>
-
-      <div class="d-flex justify-content-between">
-        <a class="nav-link-footer " href='{% url "catalog:catalog" %}'>Каталог</a>
-          <a class="nav-link-footer " href='{% url "main:install" %}'>Установка</a>
-          <a class="nav-link-footer" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
-          <a class="nav-link-footer" href='{% url "main:ventilation" %}'>Вентиляция</a>  
-          <a class="nav-link-footer" href='{% url "main:portfolio" %}'>Портфолио</a>
-          <a class="nav-link-footer" href='{% url "main:feedback" %}'>Отзывы</a>      
-          <a class="nav-link-footer" href='{% url "main:contact" %}'>Контакты</a>
+<!-- FOOTER -->
+  <footer class='py-4'>
+    <section class="violet_bg py-3">
+      <div class="d-flex justify-content-around">
+        <a class="nav-link-footer px-1" href='{% url "catalog:catalog" %}'>Каталог</a>
+        <a class="nav-link-footer px-1" href='{% url "main:install" %}'>Установка</a>
+        <a class="nav-link-footer px-1" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
+        <a class="nav-link-footer px-1" href='{% url "main:ventilation" %}'>Вентиляция</a>  
+        <a class="nav-link-footer px-1" href='{% url "main:portfolio" %}'>Портфолио</a>
+        <a class="nav-link-footer px-1" href='{% url "main:feedback" %}'>Отзывы</a>      
+        <a class="nav-link-footer px-1" href='{% url "main:contact" %}'>Контакты</a>
       </div>
+    </section>
 
-
-
+    <section class="violet_dark_bg white_dirty py-3">
       <div class='desctop_84'>
         <div class='row'>
           <div class='col-md-6'>
             <p>А можно посмотреть, как вы работаете? Можно.
             <p>Рассказываем о тонкостях нашей работы на Youtube-канале:
               <a>
-                <img src='{% static "img/youtube.png" %}'>
+                <img class='mt-3' src='{% static "img/youtube.png" %}'>
               </a>
           </div>
           <div class='col-md-2'>
-            <h2>ЦЕНЫ</h2>
+            <h2 class='pb-2'>ЦЕНЫ</h2>
             <p>Прайс на установку
             <p>Прайс на обслуживание
             <p>Прайс на ремонт
           </div>
           <div class='col-md-2'>
-            <h2>КОНТАКТЫ</h2>
+            <h2 class='pb-2'>КОНТАКТЫ</h2>
             <p>☎ +7 911 768-29-92
             <p>✉ info@spb-jara.net
 
@@ -173,13 +174,15 @@
             <img src='{% static "img/box_small.png" %}'>
           </div>
         </div>
-      </div>
 
-              
-      <div class='gray_light smaller we_300'>  
-      © 2024, SPB-ЖАРА.НЕТ. Все права защищены.
-      </div>
+    
+                
+        <p class='gray_light smaller we_300'>  
+        © 2024, SPB-ЖАРА.НЕТ. Все права защищены.
+        </p>
 
+      </div>
+    </section>
   
   </footer>
 

@@ -20,6 +20,9 @@
   --violet:rgb(80, 84, 98);
   --violet_dark:rgb(61, 66, 81);
   --violet_light:rgb(202, 203, 213);
+  --brick:rgb(182,97,90);
+  --white: rgb(250, 249, 249);
+  --white_dirty: rgb(245, 245, 245);
 }
 
 html{
@@ -41,11 +44,33 @@ h1, h2, h3, h4 {
 h1{
 	font-size: 2em;
 }
-
+a {
+  text-decoration: none!important;
+}
+button{
+  cursor: pointer;
+}
 .small{
 	font-size: 0.8em;
 }
-
+.smaller{
+  font-size: .7em;
+}
+.we_200{
+    font-weight: 200;
+}
+.we_300{
+    font-weight: 300;
+}
+.we_400{
+    font-weight: 400;
+}
+.we_500{
+    font-weight: 500;
+}
+.we_600{
+    font-weight: 600;
+}
 
 
 /**/ /**/ /**/
@@ -95,16 +120,57 @@ h1{
 	background-color: var(--violet_light);
 }
 
+
+.white{
+  color: #FAF9F9;
+}
+.white_bg{
+  background-color: #FAF9F9;
+}
+
+.white_dirty{
+  color: #F5F5F5;
+}
+.white_dirty_bg{
+  background-color: #F5F5F5;
+}
+
+
+.orange_brick_gr{
+background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,90) 90.2%)!important;
+}
+
+
 /**/ /**/ /**/
 /**/ /**/ /**/
 
+.logo{
+	  max-width: 6em!important;
+  	margin-top: .2em;
+}
+.logo_mob{
+  height: 4.6em;
+}
+
+.nav-link{
+	color: var(--black)!important;
+}
+.nav-link:hover{
+	color: var(--violet_dark)!important;
+}
+
+.nav-link-footer{
+	color: var(--white);
+}
 
 
 .desctop_84{
   width: 84%;
-  margin: .5em auto;
+  margin: .25em auto;
 }
-
+.vh_80{
+	height: 80vh!important;
+}
 .card_title{
 	background: rgba(16,27,34,0.73);
 	opacity: 1;
