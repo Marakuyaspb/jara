@@ -4,73 +4,289 @@
 
 {% block content %}
 <div class='desctop_84'>
-
-	<div class='row'>
-		<div class='col-md-4'>
-			<div class='modal_container' onclick='showModal(this);'>
-			    <img class='thumb_img thumb' src='{% static "img/gallery_install/red_wall.jpg" %}'>
-			    <div class='modal_full hide'>
-			        <span class="close" onclick="closeModal(this);">&times;</span>
-			        
-			        <img class='full_img'  src='{% static "img/gallery_install/red_wall.jpg" %}'>
-			    </div>
-			</div>
-			<div class='modal_container' onclick='showModal(this);'>
-			    <img class='thumb_img thumb' src='{% static "img/gallery_install/gray_wall.jpg" %}'>
-			    <div class='modal_full hide'>
-			        <span class="close" onclick="closeModal(this);">&times;</span>
-			        
-			        <img class='full_img'  src='{% static "img/gallery_install/gray_wall.jpg" %}'>
-			    </div>
-			</div>
-		</div>
-
-
-		<div class='col-md-4'>
-			<div class='modal_container' onclick='showModal(this);'>
-			    <img class='thumb_img thumb' src='{% static "img/gallery_install/glass_roof.jpeg" %}'>
-			    <div class='modal_full hide'>
-			        <span class="close" onclick="closeModal(this);">&times;</span>
-			        
-			        <img class='full_img'  src='{% static "img/gallery_install/glass_roof.jpeg" %}'>
-			    </div>
-			</div>
-			<div class='modal_container' onclick='showModal(this);'>
-			    <img class='thumb_img thumb' src='{% static "img/gallery_install/alpinism.jpg" %}'>
-			    <div class='modal_full hide'>
-			        <span class="close" onclick="closeModal(this);">&times;</span>
-			        
-			        <img class='full_img'  src='{% static "img/gallery_install/alpinism.jpg" %}'>
-			    </div>
-			</div>
-			
-			
-		</div>
-
-
-		<div class='col-md-4'>
-			<div class='modal_container' onclick='showModal(this);'>
-			    <img class='thumb_img thumb' src='{% static "img/gallery_install/outside.jpg" %}'>
-			    <div class='modal_full hide'>
-			        <span class="close" onclick="closeModal(this);">&times;</span>
-			        
-			        <img class='full_img'  src='{% static "img/gallery_install/outside.jpg" %}'>
-
-			    </div>
-			</div>
-			<div class='modal_container' onclick='showModal(this);'>
-			    <img class='thumb_img thumb' src='{% static "img/gallery_install/yut.png" %}'>
-			    <div class='modal_full hide'>
-			        <span class="close" onclick="closeModal(this);">&times;</span>
-			        
-			        <img class='full_img'  src='{% static "img/gallery_install/yut.png" %}'>
-
-			    </div>
+	
+	<!-- DESCTOP -->
+	<div class='d-none d-lg-block d-xl-block d-xxl-block'>
+		<div class='row'>
+			<div class='col-md-4'>
+				<div class='modal_container' onclick='showModal(this);'>
+				    <img class='thumb_img thumb' src='{% static "img/gallery_install/red_wall.jpg" %}'>
+				    <div class='modal_full hide'>
+				        <span class="close" onclick="closeModal(this);">&times;</span>
+				        
+				        <img class='full_img'  src='{% static "img/gallery_install/red_wall.jpg" %}'>
+				    </div>
+				</div>
+				<div class='modal_container' onclick='showModal(this);'>
+				    <img class='thumb_img thumb' src='{% static "img/gallery_install/gray_wall.jpg" %}'>
+				    <div class='modal_full hide'>
+				        <span class="close" onclick="closeModal(this);">&times;</span>
+				        
+				        <img class='full_img'  src='{% static "img/gallery_install/gray_wall.jpg" %}'>
+				    </div>
+				</div>
 			</div>
 
+			<div class='col-md-4'>
+				<div class='modal_container' onclick='showModal(this);'>
+				    <img class='thumb_img thumb' src='{% static "img/gallery_install/glass_roof.jpeg" %}'>
+				    <div class='modal_full hide'>
+				        <span class="close" onclick="closeModal(this);">&times;</span>
+				        
+				        <img class='full_img'  src='{% static "img/gallery_install/glass_roof.jpeg" %}'>
+				    </div>
+				</div>
+				<div class='modal_container' onclick='showModal(this);'>
+				    <img class='thumb_img thumb' src='{% static "img/gallery_install/alpinism.jpg" %}'>
+				    <div class='modal_full hide'>
+				        <span class="close" onclick="closeModal(this);">&times;</span>
+				        
+				        <img class='full_img'  src='{% static "img/gallery_install/alpinism.jpg" %}'>
+				    </div>
+				</div>
+			</div>
+
+			<div class='col-md-4'>
+				<div class='modal_container' onclick='showModal(this);'>
+				    <img class='thumb_img thumb' src='{% static "img/gallery_install/outside.jpg" %}'>
+				    <div class='modal_full hide'>
+				        <span class="close" onclick="closeModal(this);">&times;</span>
+				        
+				        <img class='full_img'  src='{% static "img/gallery_install/outside.jpg" %}'>
+
+				    </div>
+				</div>
+				<div class='modal_container' onclick='showModal(this);'>
+				    <img class='thumb_img thumb' src='{% static "img/gallery_install/yut.png" %}'>
+				    <div class='modal_full hide'>
+				        <span class="close" onclick="closeModal(this);">&times;</span>
+				        
+				        <img class='full_img'  src='{% static "img/gallery_install/yut.png" %}'>
+
+				    </div>
+				</div>
+			</div>
 		</div>
 	</div>
+
 </div>
+
+<!-- PHONE -->
+<div class='d-block d-lg-none'>
+	<div class='header_cover'>
+		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src='{% static "img/gallery_install/red_wall.jpg" %}' class="d-block w-100" alt="Сплит-система в интерьере офиса">
+				</div>
+				<div class="carousel-item">
+					<img src='{% static "img/gallery_install/outside.jpg" %}' class="d-block w-100" alt="Внешний блок кондиционера">
+				</div>
+				<div class="carousel-item">
+					<img src='{% static "img/gallery_install/glass_roof.jpeg" %}' class="d-block w-100" alt="Кондиционер в загородном доме">
+				</div>
+				<div class="carousel-item">
+					<img src='{% static "img/gallery_install/alpinism.jpg" %}' class="d-block w-100" alt="Промышленный альпинист станавливает внешний блок сплит-системы">
+				</div>
+				<div class="carousel-item">
+					<img src='{% static "img/gallery_install/yut.png" %}' class="d-block w-100" alt="Кондиционер для дома">
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+	</div>
+</div>
+
+
+<section class='desctop_84'>
+	<h1 class='py-3'>Прайс на услуги по установке настенных кондиционеров</h1>
+	<h3>Стандартный монтаж сплит-систем</h3>
+
+	<p>В стоимость входит монтаж внутреннего и наружного блоков настенного кондиционера с протяженностью фреоновой трассы до 1,5 погонных метров.</p>
+
+
+	<table id="tablepress-2" class="tablepress tablepress-id-2 tbody-has-connected-cells">
+	<thead class="orange_bg">
+	<tr class="row-1">
+		<th class="column-1">Услуга</th>
+		<th class="column-2">Доп. инф.</th>
+		<th class="column-3">Стоимость</th>
+	</tr>
+	</thead>
+
+	<tbody class="">
+		<tr class="row-2">
+			<td rowspan="4" class="column-1">Стандартный монтаж сплит-системы</td>
+			<td class="">2.1-3.5 кВт</td>
+			<td class="">20 700 ₽</td>
+		</tr>
+		<tr class="row-3">
+			<td class="white_dirty_bg">3.6-5.3 кВт</td>
+			<td class="white_dirty_bg">25 500 ₽</td>
+		</tr>
+		<tr class="row-4">
+			<td class="column-2">5.4-7.0 кВт</td><td class="column-3">27 700 ₽</td>
+		</tr>
+		<tr class="row-5">
+			<td class="white_dirty_bg">7.1-8.2 кВт</td>
+			<td class="white_dirty_bg">29 500 ₽</td>
+		</tr>
+		<tr class="row-6">
+			<td rowspan="10" class="white_dirty_bg">Монтаж полупромышленного* кондиционера</td>
+			<td class="column-2">5.3кВт</td>
+			<td class="column-3">29 700 ₽</td>
+		</tr>
+		<tr class="row-7">
+			<td class="white_dirty_bg">24 8.2 кВт</td>
+			<td class="white_dirty_bg">35 300 ₽</td>
+		</tr>
+		<tr class="row-8">
+			<td class="column-2">28 8.2 кВт</td><td class="column-3">39 700 ₽</td>
+		</tr>
+		<tr class="row-9">
+			<td class="white_dirty_bg">10.6 кВт</td>
+			<td class="white_dirty_bg">45 300 ₽</td>
+		</tr>
+		<tr class="row-10">
+			<td class="column-2">12.3 кВт</td>
+			<td class="column-3">49 700 ₽</td>
+		</tr>
+		<tr class="row-11">
+			<td class="white_dirty_bg">12.3 кВт</td>
+			<td class="white_dirty_bg">49 700 ₽</td>
+		</tr>
+		<tr class="row-12">
+			<td class="column-2">14.0кВт</td><td class="column-3">55 300 ₽</td>
+		</tr>
+		<tr class="row-13">
+			<td class="white_dirty_bg">15.8кВт</td>
+			<td class="white_dirty_bg">59 700 ₽</td>
+		</tr>
+		<tr class="row-14">
+			<td class="column-2">16.4 кВт</td>
+			<td class="column-3">65 700 ₽</td>
+		</tr>
+		<tr class="row-15">
+			<td class="white_dirty_bg">17.6кВт</td>
+			<td class="white_dirty_bg">69 300 ₽</td>
+		</tr>
+		<tr class="row-16">
+			<td rowspan="3" class="column-1">Дополнительный метр фреонтрасса: медь, толстая стенка 0,86 мм</td><td class="column-2">1/4, 3/8; Флекс/кауч.;<br>
+		кабель 5×1.5; изоляция</td>
+			<td class="column-3">2000 ₽</td>
+		</tr>
+		<tr class="row-17">
+			<td class="white_dirty_bg">1/4, 1/2; Флекс/кауч.; <br>
+		кабель 5×1.5; изоляция</td>
+			<td class="white_dirty_bg">2200 ₽</td>
+		</tr>
+		<tr class="row-18">
+			<td class="column-2">1/4, 5/8; Флекс/кауч.;<br>
+		кабель 5×1.5; изоляция</td>
+			<td class="column-3">2800 ₽</td>
+		</tr>
+		<tr class="row-19">
+			<td rowspan="6" class="white_dirty_bg">Пайка трассы</td>
+			<td class="white_dirty_bg">1/4; 6.35мм</td>
+			<td class="white_dirty_bg">500 ₽</td>
+		</tr>
+		<tr class="row-20">
+			<td class="column-2">3/8; 9.52мм</td>
+			<td class="column-3">550 ₽</td>
+		</tr>
+		<tr class="row-21">
+			<td class="white_dirty_bg">1/2; 12.7мм</td>
+			<td class="white_dirty_bg">600 ₽</td>
+		</tr>
+		<tr class="row-22">
+			<td class="column-2">15/8; 15.88мм</td>
+			<td class="column-3">650 ₽</td>
+		</tr>
+		<tr class="row-23">
+			<td class="white_dirty_bg">3/4; 19.05мм</td>
+			<td class="white_dirty_bg">700 ₽</td>
+		</tr>
+		<tr class="row-24">
+			<td class="column-2">7/8; 22.3мм</td>
+			<td class="column-3">750 ₽</td>
+		</tr>
+		<tr class="row-25">
+			<td rowspan="2" class="column-1">Дренаж (цена за 1 м.п.)</td>
+			<td class="white_dirty_bg">Капиллярка для помпы 6/10 (с работой)</td>
+			<td class="white_dirty_bg">700 ₽</td>
+		</tr>
+		<tr class="row-26">
+			<td class="column-2">Дренаж самотёк 16мм (с работой)</td><td class="column-3">700 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="column-1">Монтаж помпы под внутренний блок в стенку (работа в 2 этапа)</td><td class="column-3">5000 ₽</td>
+		</tr>
+		<tr class="row-28">
+			<td colspan="2" class="column-1">Установка кронштейнов на мягкий фасад</td><td class="column-3">1500 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="column-1">Установка кронштейнов за окном</td><td class="column-3">1500 ₽</td>
+		</tr>
+		<tr class="row-30">
+			<td colspan="2" class="column-1">Прокладка кабеля питания  3×2.5мм (цена за 1 м.п.)</td><td class="column-3">500 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="column-1">Автомат для кондиционера 16А (работа)</td><td class="column-3">2500 ₽</td>
+		</tr>
+		<tr class="row-32">
+			<td colspan="2" class="column-1">Перенос розетки (цена за 1 м.п.)</td><td class="column-3">2500 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="column-1">Дозаправка фреоном R32, R410, R22 (цена за 100 гр)</td><td class="column-3">500 ₽</td>
+		</tr>
+		<tr class="row-34">
+			<td colspan="2" class="column-1">Демонтаж натяжного потолка</td><td class="column-3">1500 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="column-1">Монтаж натяжного потолка на старый профиль</td><td class="column-3">3500 ₽</td>
+		</tr>
+		<tr class="row-36">
+			<td colspan="2" class="column-1">Вывес промышленного альпиниста</td><td class="column-3">5000 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="column-1">Навесной футляр 600×1000×450 для наружного блока (с материалами)</td><td class="column-3">7000 ₽</td>
+		</tr>
+		<tr class="row-38">
+			<td colspan="2" class="column-1">Козырёк металлический над наружным блоком 600×1000×250</td><td class="column-3">8000 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td rowspan="3" class="column-1">Прокладка трассы в в вентиляционной шахте (цена за 1 м.п., с учётом коэфф. сложности)</td>
+			<td class="column-2">от 5 м.п.</td>
+			<td class="column-3">500 ₽</td>
+		</tr>
+		<tr class="row-40">
+			<td class="column-2">6-10 м.п.</td>
+			<td class="column-3">700 ₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="column-2">от 11 м.п.</td><td class="column-3">1200 ₽</td>
+		</tr>
+		<tr class="row-42">
+			<td colspan="2" class="column-1">Согласование монтажа наружного блока кондиционера на фасаде здания</td>
+			<td class="column-3">4500 ₽</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+</section>
+
+
+
+
 
 <script src='{% static "js/modal_w.js" %}'></script>
 

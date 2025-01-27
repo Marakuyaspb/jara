@@ -175,7 +175,6 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 }
 .nav-link-footer:hover{
 	color: var(--white_dirty);
-
 }
 
 .desctop_84{
@@ -219,7 +218,7 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 }
 
 .block {
-	display: block;      
+	display: block!important;
 }   
 
 
@@ -232,7 +231,7 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -248,7 +247,7 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 
 	@media (min-width: 811px){
 		.full_img{
-			height: 86%;
+			height: 96%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -266,3 +265,11 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
     transition: 0.3s;
 		z-index: 2;
   }
+
+
+.header_cover{
+	margin: -9em 0 0 0;
+	position: relative;
+	z-index: -2;
+	opacity: 1;
+}
