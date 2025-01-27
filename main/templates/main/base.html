@@ -79,11 +79,17 @@
         <a class="navbar-brand" href='{% url "main:index" %}'> 
           <div class='d-flex'>  
             <div><img class='logo_mob  mt-3' src='{% static "img/logo.png" %}'></div>
+            <div class="ps-2">
+              <div class="d-flex flex-column">
+                <p class='gray we_500 logo_mob_text pt-5'>Янтарный </p>
+                <p class='gray we_500 logo_mob_text'> климат</p>
+              </div>
+            </div>
           </div>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();" onclick="toggleMenuIcon();">
-          <img id="menuIcon" class='menu_icon' src="{% static 'icons/menu.png' %}">
+          <img id="menuIcon" class='menu_icon pt-2' src="{% static 'icons/menu.png' %}">
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -134,18 +140,41 @@
 
 
 <!-- FOOTER -->
-  <footer class='py-4'>
-    <section class="violet_bg py-3">
-      <div class="d-flex justify-content-around">
-        <a class="nav-link-footer px-1" href='{% url "catalog:catalog" %}'>Каталог</a>
-        <a class="nav-link-footer px-1" href='{% url "main:install" %}'>Установка</a>
-        <a class="nav-link-footer px-1" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
-        <a class="nav-link-footer px-1" href='{% url "main:ventilation" %}'>Вентиляция</a>  
-        <a class="nav-link-footer px-1" href='{% url "main:portfolio" %}'>Портфолио</a>
-        <a class="nav-link-footer px-1" href='{% url "main:feedback" %}'>Отзывы</a>      
-        <a class="nav-link-footer px-1" href='{% url "main:contact" %}'>Контакты</a>
-      </div>
-    </section>
+  <footer class='pt-4'>
+
+    <!-- DESCTOP -->
+    <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+      <section class="violet_bg py-3">
+        <div class="d-flex justify-content-around">
+          <a class="nav-link-footer px-1" href='{% url "catalog:catalog" %}'>Каталог</a>
+          <a class="nav-link-footer px-1" href='{% url "main:install" %}'>Установка</a>
+          <a class="nav-link-footer px-1" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
+          <a class="nav-link-footer px-1" href='{% url "main:ventilation" %}'>Вентиляция</a>  
+          <a class="nav-link-footer px-1" href='{% url "main:portfolio" %}'>Портфолио</a>
+          <a class="nav-link-footer px-1" href='{% url "main:feedback" %}'>Отзывы</a>      
+          <a class="nav-link-footer px-1" href='{% url "main:contact" %}'>Контакты</a>
+        </div>
+      </section>
+    </div>
+
+      <!-- PHONE -->
+    <div class='d-block d-lg-none '>
+      <section class="violet_bg py-3">
+        <div class="desctop_84">
+          <div class="row ">
+            <div class='col-8'>
+              <p class=""><a class="nav-link-footer px-1" href='{% url "catalog:catalog" %}'>Каталог сплит-систем</a>
+              <p><a class="nav-link-footer px-1" href='{% url "main:install" %}'>Услуги по установке</a>
+            </div>
+            <div class='col-4'>
+              <p><a class="nav-link-footer px-1" href='{% url "main:portfolio" %}'>Портфолио</a>
+              <p><a class="nav-link-footer px-1" href='{% url "main:feedback" %}'>Отзывы</a>      
+            </div>
+          </div>
+          <p><a class="nav-link-footer px-1" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
+        </div>
+      </section>
+    </div>
 
     <section class="violet_dark_bg white_dirty py-3">
       <div class='desctop_84'>
@@ -158,13 +187,13 @@
               </a>
           </div>
           <div class='col-md-2'>
-            <h2 class='pb-2'>ЦЕНЫ</h2>
+            <h2 class='pb-2 pt-3'>ЦЕНЫ</h2>
             <p>Прайс на установку
             <p>Прайс на обслуживание
             <p>Прайс на ремонт
           </div>
           <div class='col-md-2'>
-            <h2 class='pb-2'>КОНТАКТЫ</h2>
+            <h2 class='pb-2 pt-3'>КОНТАКТЫ</h2>
             <p>☎ +7 911 768-29-92
             <p>✉ info@spb-jara.net
 
@@ -177,7 +206,7 @@
 
     
                 
-        <p class='gray_light smaller we_300'>  
+        <p class='gray_light smaller we_300 pt-3'>  
         © 2024, SPB-ЖАРА.НЕТ. Все права защищены.
         </p>
 

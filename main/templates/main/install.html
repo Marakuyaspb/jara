@@ -1,3 +1,77 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+
+{% block content %}
+<div class='desctop_84'>
+
+	<div class='row'>
+		<div class='col-md-4'>
+			<div class='modal_container' onclick='showModal(this);'>
+			    <img class='thumb_img thumb' src='{% static "img/gallery_install/red_wall.jpg" %}'>
+			    <div class='modal_full hide'>
+			        <span class="close" onclick="closeModal(this);">&times;</span>
+			        
+			        <img class='full_img'  src='{% static "img/gallery_install/red_wall.jpg" %}'>
+			    </div>
+			</div>
+			<div class='modal_container' onclick='showModal(this);'>
+			    <img class='thumb_img thumb' src='{% static "img/gallery_install/gray_wall.jpg" %}'>
+			    <div class='modal_full hide'>
+			        <span class="close" onclick="closeModal(this);">&times;</span>
+			        
+			        <img class='full_img'  src='{% static "img/gallery_install/gray_wall.jpg" %}'>
+			    </div>
+			</div>
+		</div>
+
+
+		<div class='col-md-4'>
+			<div class='modal_container' onclick='showModal(this);'>
+			    <img class='thumb_img thumb' src='{% static "img/gallery_install/glass_roof.jpeg" %}'>
+			    <div class='modal_full hide'>
+			        <span class="close" onclick="closeModal(this);">&times;</span>
+			        
+			        <img class='full_img'  src='{% static "img/gallery_install/glass_roof.jpeg" %}'>
+			    </div>
+			</div>
+			<div class='modal_container' onclick='showModal(this);'>
+			    <img class='thumb_img thumb' src='{% static "img/gallery_install/alpinism.jpg" %}'>
+			    <div class='modal_full hide'>
+			        <span class="close" onclick="closeModal(this);">&times;</span>
+			        
+			        <img class='full_img'  src='{% static "img/gallery_install/alpinism.jpg" %}'>
+			    </div>
+			</div>
+			
+			
+		</div>
+
+
+		<div class='col-md-4'>
+			<div class='modal_container' onclick='showModal(this);'>
+			    <img class='thumb_img thumb' src='{% static "img/gallery_install/outside.jpg" %}'>
+			    <div class='modal_full hide'>
+			        <span class="close" onclick="closeModal(this);">&times;</span>
+			        
+			        <img class='full_img'  src='{% static "img/gallery_install/outside.jpg" %}'>
+
+			    </div>
+			</div>
+			<div class='modal_container' onclick='showModal(this);'>
+			    <img class='thumb_img thumb' src='{% static "img/gallery_install/yut.png" %}'>
+			    <div class='modal_full hide'>
+			        <span class="close" onclick="closeModal(this);">&times;</span>
+			        
+			        <img class='full_img'  src='{% static "img/gallery_install/yut.png" %}'>
+
+			    </div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script src='{% static "js/modal_w.js" %}'></script>
+
+{% endblock %}
