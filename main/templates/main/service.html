@@ -1,3 +1,262 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block content %}
+
+<style type="text/css">
+	.tabs {
+  width: 650px;
+  float: none;
+  list-style: none;
+  position: relative;
+  margin: 80px 0 0 10px;
+  text-align: left;
+  li {
+    float: left;
+    display: block;
+  }
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  label {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 2px 2px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background: $tabs-base-color;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+      background: darken($tabs-base-color, 10);
+    }
+  }
+  .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 25px;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background: darken($tabs-base-color, 15);
+  }
+  //The Magic
+  [id^="tab"]:checked + label {
+    top: 0;
+    padding-top: 17px;
+    background: darken($tabs-base-color, 15);
+  }
+  [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
+	}
+	p.link {
+  clear: both;
+  margin: 380px 0 0 15px;
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: darken($tabs-base-color, 15);
+    @include transition(all 0.2s ease-in);
+    &:hover {
+      background-color: darken($tabs-base-color, 20);
+    }
+  }
+}
+</style>
+
+
+<section class='pt-3 desctop_84'>
+
+	<ul class="tabs" role="tablist">
+	    <li>
+	        <input type="radio" name="tabs" id="tab1" checked />
+	        <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">ОБСЛУЖИВАНИЕ</label>
+	        <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description" aria-hidden="false">
+
+				<div class='pt-4 pb-2 '>
+					<h1 id='service'>Диагностика и чистка сплит-систем</h1>
+					<p>тобы кондиционер работал стабильно и долго, необходима плановая диагностика — не реже одного раза в год.</p>
+				</div>
+
+				<h2>Прайс на обслуживание сплит-систем</h2>
+				<table id="" class="">
+					<thead class="orange_bg">
+						<tr class="">
+							<th class="">Услуга</th>
+							<th class="">Стоимость</th>
+						</tr>
+					</thead>
+
+					<tbody class="">
+						<tr class="">
+							<td class="">Стандартная диагностика и чистка сплит-системы до 5 кВт (внутренний и наружный блоки) специальным оборудованием под сервис-пакет</td>
+							<td class="">5000₽</td>
+						</tr>
+						<tr class="">
+							<td class="white_dirty_bg">Чистка наружного блока сплит-системы до 5 кВт специальным оборудованием</td>
+							<td class="white_dirty_bg">3000₽</td>
+						</tr>
+						<tr class="">
+							<td class="">Чистка внутреннего блока сплит-системы до 5 кВт специальным оборудованием под сервис-пакет</td>
+							<td class="">4000₽</td>
+						</tr>
+						<tr class="">
+							<td class="white_dirty_bg">Устранение протечки внутреннего блока - замена дренажной трубки (16мм)</td>
+							<td class="white_dirty_bg">1500₽</td>
+						</tr>
+						<tr class="">
+							<td class="">Дозаправка кондиционера фреоном: 22R, 410R, 32R (цена за 100 грамм)</td>
+							<td class="">500₽</td>
+						</tr>
+						<tr class="">
+							<td class="white_dirty_bg">Промышленный альпинист</td>
+							<td class="white_dirty_bg">5000₽</td>
+						</tr>
+						<tr class="">
+							<td class="">Аренда автовышки (4 часа)</td>
+							<td class="">7000₽</td>
+						</tr>
+					</tbody>
+				</table>
+	        </div>
+	    </li>
+	  
+	    <li>
+			<input type="radio" name="tabs" id="tab2" />
+			<label for="tab2"role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">РЕМОНТ</label>
+			<div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
+				<div class='pt-4 pb-2 '>
+					<h1 id='fix'>Ремонт сплит-систем</h1>
+
+					<p>Кондиционер перестал справляться с охлаждением или обогревом?
+					<p>Произошла протечка внутреннего блока и в комнате лужи? Обмерзание трубки наружного блока?
+					<p>Решаем проблемы быстро и аккуратно. Беремся за самые сложные случаи.
+
+					<h3>Более 15 лет возвращаем в строй кондиционеры петербуржцев</h3>
+
+
+					<h2 class="pt-3">Прайс на обслуживание сплит-систем</h2>
+
+<table id="" class="">
+	<thead class="orange_bg">
+		<tr class="">
+			<th class="">Услуга</th>
+			<th class="">Стоимость</th>
+		</tr>
+	</thead>
+
+	<tbody class="">
+		<tr class="">
+			<td class="">Стандартная диагностика неисправной сплит-системы до 5 кВт с выездом</td>
+			<td class="">3000₽</td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg">Стандартная диагностика неисправного полупромышленного кондиционера с выездом</td>
+			<td class="white_dirty_bg">4000₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Стандартная диагностика неисправного промышленного кондиционера, VRV-системы с выездом</td>
+			<td class="">7000₽</td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"> </td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+				<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"></td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+		<tr class="">
+			<td class=""></td>
+			<td class=""></td>
+		</tr>
+		<tr class="">
+			<td class="white_dirty_bg"> </td>
+			<td class="white_dirty_bg"></td>
+		</tr>
+
+	</tbody>
+</table>
+
+				</div>
+	        </div>
+	    </li>
+	</ul>
+
+	<br style="clear: both;" />
+
+
+</section>
+
+
+
+
+
+
+{% endblock%}
