@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     'main',
     'catalog',
+    'portfolio',
 ]
 
 MIDDLEWARE = [

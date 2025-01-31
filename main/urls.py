@@ -17,7 +17,6 @@ urlpatterns = [
     path('contact/', views.contact, name = 'contact'),
     path('feedback/', views.feedback, name = 'feedback'),    
     path('install/', views.install, name = 'install'),
-    path('portfolio/', views.portfolio, name = 'portfolio'),
     path('service/', views.service, name = 'service'),
     path('stock/', views.stock, name = 'stock'),
     path('ventilation/', views.ventilation, name = 'ventilation'),

@@ -14,7 +14,10 @@
 
 :root{
   --black:rgb(5, 5, 5);
+  --blue_light: rgb(154, 182, 194); /* #9ab6c2 */
+  --brown: rgb(66, 52, 49); /* #423431 */
   --gray:rgb(16,27,34);
+  --gray_light: rgb(213, 205, 192); /* #d5cdc0 */
   --orange:rgb(211, 94, 53);
   --violet:rgb(80, 84, 98);
   --violet_dark:rgb(61, 66, 81);
@@ -128,11 +131,33 @@ td,th {
 	background-color: var(--black);
 }
 
+.blue_light{
+	color: var(--blue_light);
+}
+.blue_light_bg{
+	background-color: var(--blue_light);
+}
+
+.brown{
+	color: var(--brown);
+}
+.brown_bg{
+	background-color: var(--brown);
+}
+
+
 .gray{
 	color: var(--gray);
 }
 .gray_bg{
 	background-color: var(--gray);
+}
+
+.gray_light{
+	color: var(--gray_light);
+}
+.gray_light_bg{
+	background-color: var(--gray_light);
 }
 
 .orange{

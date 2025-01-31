@@ -60,15 +60,6 @@ def install(request):
 
 
 
-def portfolio(request):
-	callme_form = handle_callme_form(request)
-
-	context = {
-		'callme_form': callme_form,
-	}
-	return render(request, 'main/portfolio.html', context)
-	
-
 
 def service(request):
 	callme_form = handle_callme_form(request)

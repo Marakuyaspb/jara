@@ -5,7 +5,11 @@ from django.db.models import Q, F, Count, Value
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template.loader import get_template
+
 from .models import *
+from catalog.models import *
+from catalog.forms import *
+from catalog.forms_generator import *
 
 
 def portfolio(request):
@@ -13,10 +17,10 @@ def portfolio(request):
 
 	callme_form = CallMeForm()
 
-		if request.method == 'POST':
-			form_type = request.POST.get('form_type')
-			if form_type == 'call_me':
-				callme_form = handle_callme_form(request)
+	if request.method == 'POST':
+		form_type = request.POST.get('form_type')
+		if form_type == 'call_me':
+			callme_form = handle_callme_form(request)
 		
 			
 		context = {'callme_form': callme_form}
