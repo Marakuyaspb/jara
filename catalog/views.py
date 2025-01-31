@@ -32,7 +32,7 @@ def catalog(request):
 
 def the_product(request, id):
 	if id:
-		the_car = get_object_or_404(Car, id=id)
+		the_car = get_object_or_404(Product, id=id)
 
 		callme_form = CallMeForm()
 		want_this_form = WantThisForm()

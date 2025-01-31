@@ -1,3 +1,30 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block content %}
+
+<section class='desctop_50'>
+
+	<div class='el_grid_container'>
+		
+		{% for the_product in products %}
+
+		<a href="{% url 'portfolio:the_case' id=the_case.id %}">
+
+			<div class="card" style="width: 18rem;">
+			  <img src="{{ the_product.img_1 }}" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h4 class="py-3">{{ the_product.name }}</h4>
+			  </div>
+			</div>
+
+		</a>
+
+		{% endfor %}
+
+	</div>
+
+</section>
+
+
+{% endblock %}

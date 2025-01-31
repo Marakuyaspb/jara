@@ -41,7 +41,8 @@ class Product(models.Model):
 	img_4 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 4')
 	img_5 = models.ImageField(upload_to='catalog/', null=True, blank=True, verbose_name = 'Фото 5')
 	
-
+	def __str__(self):
+		return self.name
 
 
 

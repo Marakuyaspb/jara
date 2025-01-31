@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class='desctop_50'>
+
+	<h1>Портфолио: сплит-системы в интерьерах клиентов</h1>
+
+	<p class="py-3">Путь сплит-систем — от коробки до установленной, подключенной, полностью готовой к работе. Видеоотзывы наших клиентов, а также видео, в которых мы рассказываем и показываем технические тонкости и нюансы работы — на нашем Youtube-канале.</p>
+
+	<div class='el_grid_container'>
+		{% for the_case in cases %}
+
+		<a href="{% url 'portfolio:the_case' id=the_case.id %}">
+
+			<div class="card" style="width: 18rem;">
+			  <img src="{{ the_case.img_1 }}" class="card-img-top" alt="Сплит-ситема {{ the_case.name }}">
+			  <div class="card-body">
+			    <h4 class="py-3">{{ the_case.name }}</h4>
+			  </div>
+			</div>
+
+		</a>
+
+		{% endfor %}
+
+		<!-- <h2>Сплит-система CASARTE ELETTO 1U25CX1/R3</h2>
+		<div></div>
+
+		<h2>Сплит-система Haier AS25S2SF1FA</h2>
+		<div></div>
+
+		<h2>Сплит-система FUJITSU ASYG12KPCA-R</h2>
+		<div></div>
+
+		<h2>Сплит-система Hisense-AS13UW4RYGTV03G</h2>
+		<div></div>
+
+		<h2>Сплит-система MITSUBISHI MSZ-HR25VF</h2>
+		<div></div>
+
+		<h2>Сплит-система MITSUBISHI-MSZ-EF35VGKW</h2>
+		<div></div>
+
+		<h2>Сплит-система MITSUBISHI-SKM35ZSP-W</h2>
+		<div></div>
+
+		<h2>Сплит-система Hisense-AS13UW4RYGTV03G</h2>
+
+
+		<h2>Мульти сплит-система Haier AS35S2SJ1FA-G на 2 комнаты </h2>
+		<div></div> -->
+
+	</div>
+
+</section>
+
+<script src='{% static "js/pinterest_grid.js" %}'></script>
+
+{% endblock %}
