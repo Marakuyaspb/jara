@@ -227,12 +227,13 @@
 <script src="{% static 'js/lazy_video_load.js' %}"></script>
 <script src='{% static "js/toggle_menu.js" %}'></script>
 
+<script src='{% static "js/jquery-3.7.1.min.js" %}'></script>
 <script src="{% static 'owl/owl.carousel.min.js' %}"></script>
 
 
 
 <script>
-  $(document).ready(function(){
+$(document).ready(function(){
     $('.owl-carousel-five').owlCarousel({
       items: 5, // Set the number of items to display in the carousel
       loop: true, // Enable loop
@@ -252,7 +253,7 @@
 </script>
 
 <script>
-  $(document).ready(function(){
+$(document).ready(function(){
     $('.owl-carousel-one-by-one').owlCarousel({
       items: 1, // Set the number of items to display in the carousel
       loop: true, // Enable loop

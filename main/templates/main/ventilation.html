@@ -1,3 +1,230 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block content %}
+
+
+<section class="desctop_84">
+	<h1>Высотные работы по установке вентиляции на фасадах</h1>
+	<h3 class="pt-3">Установка вентиляции: этапы работы</h3>
+</section>
+
+<div class="owl-carousel owl-theme owl-carousel-five">
+	<div class="item">
+		<div class='modal_container' onclick='showModal(this);'>
+			<img class='thumb_img thumb' src='{% static "img/gallery_vent/vent_1.jpeg" %}'>
+			<div class='modal_full hide'>
+				<span class="close" onclick="closeModal(this);">&times;</span>
+
+				<img class='full_img'  src='{% static "img/gallery_vent/vent_1.jpeg" %}'>
+			</div>
+		</div>
+	</div>
+	<div class="item">
+		<div class='modal_container' onclick='showModal(this);'>
+			<img class='thumb_img thumb' src='{% static "img/gallery_vent/vent_2.jpeg" %}'>
+			<div class='modal_full hide'>
+				<span class="close" onclick="closeModal(this);">&times;</span>
+
+				<img class='full_img'  src='{% static "img/gallery_vent/vent_2.jpeg" %}'>
+			</div>
+		</div>
+	</div>
+	<div class="item">
+		<div class='modal_container' onclick='showModal(this);'>
+			<img class='thumb_img thumb' src='{% static "img/gallery_vent/vent_3.jpeg" %}'>
+			<div class='modal_full hide'>
+				<span class="close" onclick="closeModal(this);">&times;</span>
+
+				<img class='full_img'  src='{% static "img/gallery_vent/vent_3.jpeg" %}'>
+			</div>
+		</div>
+	</div>
+	<div class="item">
+		<div class='modal_container' onclick='showModal(this);'>
+			<img class='thumb_img thumb' src='{% static "img/gallery_vent/vent_4.jpeg" %}'>
+			<div class='modal_full hide'>
+				<span class="close" onclick="closeModal(this);">&times;</span>
+
+				<img class='full_img'  src='{% static "img/gallery_vent/vent_4.jpeg" %}'>
+			</div>
+		</div>
+	</div>
+	<div class="item">
+		<div class='modal_container' onclick='showModal(this);'>
+			<img class='thumb_img thumb' src='{% static "img/gallery_vent/vent_5.jpeg" %}'>
+			<div class='modal_full hide'>
+				<span class="close" onclick="closeModal(this);">&times;</span>
+
+				<img class='full_img'  src='{% static "img/gallery_vent/vent_5.jpeg" %}'>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<section class='pt-3 desctop_84'>
+
+<h3 class="pt-3">Прайс на установку вентиляции</h3>
+
+<table id="" class="">
+	<thead class='orange_bg'>
+		<tr class="">
+			<th class="">Услуга</th><th class=""></th><th class="">Стоимость</th>
+		</tr>
+		</thead>
+	<tbody class="row-striping row-hover">
+		<tr class="">
+			<td rowspan="14" class="">Прокладка вентиляционного воздуховода<br>
+		(Стоимость указана за 1 погонный метр)
+			</td>
+			<td class="">Ø до 250 мм </td>
+			<td class="">615₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 250 мм </td>
+			<td class="">705₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Ø 315 мм</td>
+			<td class="">870₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 355 мм</td>
+			<td class="">975₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Ø 400</td>
+			<td class="">1080₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 450</td>
+			<td class="">1230₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Ø 500 мм </td>
+			<td class="">1380₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 550 мм </td>
+			<td class="">1553₽</td>
+		</tr>
+		<tr class="">
+			<td class=""> Ø 600</td>
+			<td class="">1665₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 630</td>
+			<td class="">1740₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Ø 710</td>
+			<td class="">1935₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 800</td>
+			<td class="">2 205₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Ø 900</td>
+			<td class="">2460₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Ø 1000</td>
+			<td class="">2775₽</td>
+		</tr>
+		<tr class="">
+			<td colspan="2" class="">Прокладка вентиляционного воздуховода прямоугольного сечения<br>
+			(Стоимость - за 1 м2)</td>
+			<td class="">1050₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="">Установка вентиляционной решетки </td>
+			<td class="">от 2880₽</td>
+		</tr>
+		<tr class="">
+			<td colspan="2" class="">Прокладка вентиляционного воздуховода с изоляцией</td><td class="">Коэфф. 1,2÷2</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="">Прокладка воздуховода дымоудаления (более 0,8 мм) </td><td class="">Коэфф. 1,5÷2</td>
+		</tr>
+		<tr class="0">
+			<td colspan="2" class="">Работа промышленного альпиниста</td><td class="">от 5000</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<h2 class='pt-3'>Демонтаж систем вентиляции на фасаде</h2>
+<p>Стоимость услуг по демонтажу: стоимость монтажных услуг минус 10%</p>
+
+
+<h2>Коэффициенты сложности</h2>
+<p>Коэффициент к стоимости работ по монтажу наклонных, горизонтальных участков трасс и
+воздуховодов = 2.</p>
+<p>Коэффициент сложности 1,2 ÷ 2 применяется в случае стеснённых условий, сложной кровли, утеплённого, вентилируемого фасадов и пр.</p>
+
+
+<h2 class="pt-3">Прайс на высотные работы</h2>
+<p>Услуги по монтажу с привлечением промышленного альпиниста либо автовышки.</p>
+
+
+<table id="tablepress-5" class="tablepress tablepress-id-5 tbody-has-connected-cells">
+	<thead class="orange_bg">
+		<tr class="">
+			<th colspan="2" class="">Услуга</th><th class="">Стоимость</th>
+		</tr>
+	</thead>
+	<tbody class="">
+		<tr class="">
+			<td colspan="2" class="">Работа промышленного альпиниста</td><td class="">от 5000₽ до 15000₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="">Аренда автовышки (4 часа)</td><td class="">7000₽</td>
+		</tr>
+		<tr class="">
+			<td rowspan="4" class="">Установка наружного блока кондиционера</td><td class="">до 3,5 кВт</td><td class="">5400₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">от 3,5 до 5 кВт</td><td class="">6030₽</td>
+		</tr>
+		<tr class="">
+			<td class="">от 5 до 9 кВт</td><td class="">7020₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">от 9 до 12 кВт</td><td class="">8280₽</td>
+		</tr>
+		<tr class="">
+			<td colspan="2" class="">Установка мультиблока двухпортового </td><td class="">7020₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="">Установка мультиблока трехпортового</td><td class="">8280₽</td>
+		</tr>
+		<tr class="">
+			<td colspan="2" class="">Установка мультиблока четырехпортового </td><td class="">9510₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="">Установка мультиблока пятипортового</td><td class="">10800₽</td>
+		</tr>
+		<tr class="">
+			<td class="">Прокладка трассы кондиционера, дренажа по фасаду здания </td>
+			<td class="">за 1 пог. м.</td>
+			<td class="">580₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td class="">Прокладка трассы кондиционера в коробе по фасаду здания</td><td class="">за 1 пог. м.</td><td class="">850₽</td>
+		</tr>
+		<tr class="">
+			<td colspan="2" class="">Пайка стыка</td><td class="">580₽</td>
+		</tr>
+		<tr class="white_dirty_bg">
+			<td colspan="2" class="">Установка козырька</td><td class="">2880₽</td>
+		</tr>
+	</tbody>
+</table>
+
+</section>
+
+<script src='{% static "js/modal_w.js" %}'></script>
+
+{% endblock %}
