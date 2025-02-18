@@ -1,0 +1,314 @@
+{% load static %}
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+
+<style type="text/css">
+
+	/* About parallax */
+
+	.intro {
+		position: relative;
+		height: 90vh;
+		background-color: var(--black);
+		color: var(--white);
+
+	.visual {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  
+	  &::after {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: radial-gradient(rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5));
+	  }
+	}
+
+	.bg-img {
+	  will-change: transform filter;
+	  filter: brightness(50%);
+	}
+	}
+
+	.title {
+		position: relative;
+	}
+
+	.bg-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.footer_bright {
+		height: 80vh;
+	}
+
+	.footer_bright h2{
+		color: var(--red);
+		text-shadow: 1px 1px 2px rgba(255, 255, 255, 1); 
+	}
+	.footer_into{
+		background-image: url('{% static "img/soft-evening.jpg" %}');
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center top;
+	}
+
+	.slide-container {
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.intro, .slide, .footer_bright {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slide {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		color: var(--violet);
+		will-change: transform;
+
+
+	&::after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: linear-gradient(to bottom, var(--violet_light), var(--white));
+	}
+
+
+	@media (max-width: 810px) {
+		.bg-img {
+			height: 110%;
+			width: 120%;
+			left: -10%;
+			z-index: 5;
+		}
+	}
+	@media (min-width: 811px) {
+		.bg-img {
+			height: 110%;
+			width: 50%;
+			left: -10%;
+			z-index: 5;
+		}
+		.slide-title{
+			padding-left: 14em;
+		}
+	}
+
+	.slide-title {
+		position: relative;
+		z-index: 5;
+	}
+
+</style>
+
+
+
+
+ 
+
+<div class="slide-container">
+	<section id="slide-1" class="slide slide-odd p-4">
+		<img loading="lazy" src='{% static "img/nice/collage_glass_roof.png" %}' class="bg-img" />
+		<div class="slide-title">
+			<p>- СЕРВИС -</p>
+			<br>
+			<h1>БЕСПЛАТНЫЙ</h1>
+			<br> 
+			<p><span class="major_text">выезд мастера для замера
+			перед монтажом</span></p>
+			<a href="#"><button class="mt-5 btn_transperent violet">Ремонт и Обслуживание</button></a>
+		</div>
+  </section>
+
+  <section id="slide-2" class="slide slide-even p-4">
+    <img loading="lazy" src='{% static "img/nice/collage_circles.png" %}' class="bg-img" />
+    <div class="slide-title ">
+
+			<p>- СВЕЖЕСТЬ -</p>
+			<br>
+			<h1>СВОЯ АТМОСФЕРА</h1>
+			<br> 
+			<span class="major_text">Ионизация воздуха.
+			<p>Как вблизи горного водопада.</p>
+			<p>Только дома.</p></span>
+			<a href="#" class=""><button class="mt-5 btn_transperent violet">Ремонт и Обслуживание</button></a>
+		</div>
+  </section>
+
+  <section id="slide-2" class="slide slide-even p-4">
+    <img loading="lazy" src='{% static "img/nice/collage_glass_door.png" %}' class="bg-img" />
+    <div class="slide-title">
+			<p>- КОМФОРТ -</p>
+			<br>
+			<h1>ВАЖНЕЙ ВСЕГО ПОГОДА В ДОМЕ</h1>
+			<br> 
+			<p><span class="major_text">Высокотехнологичные решения
+климат-контроля</span></p>
+			<a href="#" class=""><button class="mt-5 btn_transperent violet">Ремонт и Обслуживание</button></a>			
+		</div>
+  </section>
+
+  <section id="slide-3" class="slide slide-odd p-4">
+    <img loading="lazy" src='{% static "img/nice/collage_yut.png" %}' class="bg-img" />
+    
+    <div class="slide-title">
+			<p>- ПРИОРИТЕТЫ -</p>
+			<br>
+			<h1>ВЫСОКОЕ КАЧЕСТВО СПЛИТ-СИСТЕМ</h1>
+			<br> 
+			<p><span class="major_text">Высокое качество жизни</span></p>
+			<a href="#" class=""><button class="mt-5 btn_transperent violet">Ремонт и Обслуживание</button></a>			
+		</div>
+
+  </section>
+  
+</div>
+
+
+<div class='footer_bright footer_into'>
+
+	<center class="">
+    <h2 class="we_500"></h2>
+        
+    </div>
+  </center>
+</div>
+
+
+
+<script type="text/javascript">
+  const lenis_1 = new Lenis();
+
+	function raf(time) {
+	  lenis_1.raf(time)
+	  requestAnimationFrame(raf)
+	}
+
+	requestAnimationFrame(raf)
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	// parallax effect on the header img
+	gsap.to('.intro .bg-img', {
+	  y: '80%',
+	  ease: Power0.easeNone,
+	  scrollTrigger: {
+	    trigger: '.intro',
+	    start: 'top 1px',
+	    end: 'bottom 100px',
+	    scrub: true,
+	    // markers: true,
+	  },
+	});
+
+	// gradually darken and blur the header img
+	gsap.to('.intro .bg-img', {
+	  filter: 'brightness(0.25) blur(16px)',
+	  ease: Power0.easeNone,
+	  scrollTrigger: {
+	    trigger: '.intro',
+	    start: 'center top',
+	    scrub: true,
+	    // markers: true,
+	  },
+	});
+
+	// the header title
+	gsap.to('.intro .title', {
+	  y: '45vh',
+	  ease: Power0.easeNone,
+	  scrollTrigger: {
+	    trigger: '.intro',
+	    start: '25% top',
+	    scrub: true,
+	  }
+	});
+
+	const progressTL = gsap.to('.progress-thumb', { scaleX: 1, ease: Power0.easeNone, paused: true });
+
+	const slides = gsap.utils.toArray('.slide');
+
+	const slidesTL = gsap.timeline();
+
+	function slideTL(slide, isFirst = false) {
+	  const tl = gsap.timeline();
+	  if (!isFirst) {
+	    tl.from(slide, {
+	        xPercent: 100,
+	      });
+	    tl.from(slide.querySelector('h2'), {
+	      duration: 0.25,
+	      opacity: 0,
+	      x: 100,
+	    }, 0.2);
+	  }
+	  
+	  tl.fromTo(slide.querySelector('.bg-img'), {
+	    xPercent: isFirst ? 0 : 8,
+	  }, {
+	    xPercent: -8,  
+	  }, 0);
+	  
+	  return tl;
+	}
+
+	slides.forEach((slide, i) => {
+	  if (i === 0) {
+	    slidesTL.add(slideTL(slide, true));
+	  } else {
+	    slidesTL.add(slideTL(slide), '-=0.1');
+	  }
+	});
+
+	ScrollTrigger.create({
+	  animation: slidesTL,
+	  trigger: ".slide-container",
+	  start: "top top",
+	  end: `+=${slides.length * 100}%`, 
+	  scrub: 1,
+	  pin: true,
+	  anticipatePin: 1,
+	  onUpdate: (self) => {
+	    progressTL.progress(self.progress);
+	  },
+	});
+
+	gsap.from('.footer_bright h2', {
+	  opacity: 0,
+	  y: 100,
+	  duration: 0.6,
+	  scrollTrigger: {
+	    trigger: 'footer',
+	    toggleActions: 'play none none reset',
+	    start: 'center bottom',
+	    // scrub: 0.5,
+	    // markers: true,
+	  },
+	});
+</script>

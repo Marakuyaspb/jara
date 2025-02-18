@@ -70,61 +70,67 @@
       </div>
   </div>
 
-  <!-- PHONE -->
+  <!-- PHONE & TABLET -->
   <div class='d-block d-lg-none '>
-
-    <nav  id='nav_mob' class="navbar navbar-expand-lg">
-      <div class="container-fluid mx-3">
-        
-        <a class="navbar-brand" href='{% url "main:index" %}'> 
-          <div class='d-flex'>  
-            <div><img class='logo_mob  mt-3' src='{% static "img/logo.png" %}'></div>
-            <div class="ps-2">
-              <div class="d-flex flex-column">
-                <p class='gray we_500 logo_mob_text pt-5'>Янтарный </p>
-                <p class='gray we_500 logo_mob_text'> климат</p>
+    <nav id='nav_mob' class="px-3 pt-2">
+      <div class="d-flex justify-content-between">
+        <div>
+          <a class="navbar-brand" href='{% url "main:index" %}'>
+            <div class='d-flex'>  
+              <div><img class='logo_mob' src='{% static "img/logo.png" %}'></div>
+              <div class="ps-2">
+                <div class="d-flex flex-column">
+                  <p class='gray we_500 logo_mob_text pt-4'>Янтарный </p>
+                  <p class='gray we_500 logo_mob_text'> климат</p>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();" onclick="toggleMenuIcon();">
-          <img id="menuIcon" class='menu_icon pt-2' src="{% static 'icons/menu.png' %}">
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-
-          <ul class="navbar-nav menu_mob_list">
-
-            <li class="nav-item">
-              <a class="nav-link " href='{% url "catalog:catalog" %}'>Каталог</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href='{% url "main:install" %}'>Установка</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href='{% url "main:ventilation" %}'>Вентиляция</a>
-            </li>
-            <li class="nav-item we_300 ms-2 my-2">——————————</li>
-
-            <li class="nav-item">
-              <a class="nav-link" href='{% url "portfolio:portfolio" %}'>Портфолио</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href='{% url "main:feedback" %}'>Отзывы</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href='{% url "main:contact" %}'>Контакты</a>
-            </li>
-
-          </ul>
-
+          </a>
+        </div>
+        <div class='pt-3'>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();" onclick="toggleMenuIcon();">
+            <img id="menuIcon" class='menu_icon pt-1' src="{% static 'icons/menu.png' %}">
+          </button>
+      
         </div>
       </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav menu_mob_list ps-3">
+
+          <li class="nav-item">
+            <a class="nav-link " href='{% url "catalog:catalog" %}'>Каталог сплит-систем</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href='{% url "main:install" %}'>Установка</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href='{% url "main:service" %}'>Обслуживание и ремонт</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='{% url "main:ventilation" %}'>Вентиляция</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href='{% url "portfolio:portfolio" %}'>Портфолио</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='{% url "main:feedback" %}'>Отзывы</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href='{% url "main:contact" %}'>Контакты</a>
+          </li>
+
+          <hr>
+        </ul>
+      </div>
+
+      <div class='d-flex justify-content-around pb-3 px-3 gray'>
+        <p class='small logo_mob_text we_500'>Лучшие модели<br>сплит-систем</p>
+        <h3 class='ps-4 major_text we_500'>+7(911)768-29-92</h3>
+      </div>
+
     </nav>
 
   </div>
@@ -157,8 +163,8 @@
       </section>
     </div>
 
-      <!-- PHONE -->
-    <div class='d-block d-lg-none '>
+    <!-- PHONE -->
+    <div class='d-block d-lg-none'>
       <section class="violet_bg py-3">
         <div class="desctop_84">
           <div class="row ">
@@ -186,18 +192,18 @@
                 <img class='mt-3' src='{% static "img/youtube.png" %}'>
               </a>
           </div>
-          <div class='col-md-2'>
+          <div class='col-md-2 small'>
             <h2 class='pb-2 pt-3'>ЦЕНЫ</h2>
-            <p>Прайс на установку
-            <p>Прайс на обслуживание
+            <p class='pb-2'>Прайс на установку
+            <p class='pb-2'>Прайс на обслуживание
             <p>Прайс на ремонт
           </div>
           <div class='col-md-2'>
             <h2 class='pb-2 pt-3'>КОНТАКТЫ</h2>
-            <p>☎ +7 911 768-29-92
-            <p>✉ info@spb-jara.net
+            <p class='pb-2'>☎ +7 911 768-29-92
+            <p class='pb-2'>✉ info@spb-jara.net
 
-            <p>Скачать образец договора подряда
+            <p class='pb-2'>Скачать образец договора подряда
           </div>
           <div class='col-md-2'>
             <img src='{% static "img/box_small.png" %}'>

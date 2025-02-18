@@ -16,9 +16,10 @@
   --black:rgb(5, 5, 5);
   --blue_light: rgb(154, 182, 194); /* #9ab6c2 */
   --brown: rgb(66, 52, 49); /* #423431 */
-  --gray:rgb(16,27,34);
+  --gray:rgb(16,27,34); /* #101b22  */
   --gray_light: rgb(213, 205, 192); /* #d5cdc0 */
-  --orange:rgb(211, 94, 53);
+  --orange:rgb(211, 94, 53); /* #d35e35 */
+  --orange_so_light: rgb(252, 242, 237); /* #fcf2ed */
   --violet:rgb(80, 84, 98);
   --violet_dark:rgb(61, 66, 81);
   --violet_light:rgb(202, 203, 213);
@@ -55,7 +56,7 @@ h3{
 h4{
 	font-size: 1.2em!important;
 }
-
+h1, h2, h3, h4, p { margin: 0!important; }
 a {
   text-decoration: none!important;
 }
@@ -88,7 +89,9 @@ td,th {
 	}
 }
 
-
+.major_text{
+	font-size: 1.1em!important;
+}
 .small{
 	font-size: 0.8em;
 }
@@ -145,6 +148,12 @@ td,th {
 	background-color: var(--brown);
 }
 
+.brick{
+	color: var(--brick);
+}
+.brick_bg{
+	background-color: var(--brick);
+}
 
 .gray{
 	color: var(--gray);
@@ -166,6 +175,14 @@ td,th {
 .orange_bg{
 	background-color: var(--orange);
 }
+
+.orange_so_light{
+	color: var(--orange_so_light);
+}
+.orange_so_light_bg{
+	background-color: var(--orange_so_light);
+}
+
 
 .violet{
 	color: var(--violet);
@@ -209,6 +226,51 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 }
 
 
+
+.btn_transperent{
+	border: none;
+	border-radius: 8px;
+	background: transparent;
+	padding: .4em .8em;
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.2);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.2);
+	box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.2);
+}
+.btn_transperent:hover{
+	background: transparent;
+	padding: .4em .8em;
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+	box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+}
+
+.btn_icon{
+	width: 2.4em;
+}
+
+
+.container_rounded{
+	border: none;
+	border-radius: 10px;
+}
+.container_rounded_1{
+	border: none;
+	border-radius: 1em 0 0 0;
+}
+.container_rounded_half{
+	border: none;
+	border-radius: 0 1em;
+}
+.container_rounded_half_left{
+	border: none;
+	border-radius: 1em 0 0 1em;
+}
+
+.container_rounded_3{
+	border: none;
+	border-radius: 140px 140px 140px 0px;
+}
+
 /**/ /**/ /**/
 /**/ /**/ /**/
 
@@ -221,7 +283,7 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 }
 
 .logo_mob_text{
-	line-height: .5;
+	line-height: 1;
 	font-size: 1em;
 }
 
@@ -362,4 +424,14 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+/*  BOOTSTRUP UPDATE */
+
+.navbar-brand{
+	margin: 0!important;
 }
