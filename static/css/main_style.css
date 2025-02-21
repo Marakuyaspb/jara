@@ -248,27 +248,33 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 	width: 2.4em;
 }
 
-
+.vh_100{
+	min-height: 100vh;
+}
 .container_rounded{
 	border: none;
-	border-radius: 10px;
+	border-radius: 2em!important;
 }
 .container_rounded_1{
 	border: none;
-	border-radius: 1em 0 0 0;
+	border-radius: 2em 0 0 0;
 }
 .container_rounded_half{
 	border: none;
-	border-radius: 0 1em;
+	border-radius: 0 2em;
 }
 .container_rounded_half_left{
 	border: none;
-	border-radius: 1em 0 0 1em;
+	border-radius: 2em 0 0 2em;
+}
+.container_rounded_half_right{
+	border: none;
+	border-radius: 0 2em 2em 0;
 }
 
 .container_rounded_3{
 	border: none;
-	border-radius: 140px 140px 140px 0px;
+	border-radius: 2em 2em 2em 0px;
 }
 
 /**/ /**/ /**/
@@ -311,10 +317,18 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 		width: 80%;
 	  margin: .25em auto;
 	}
+	.desctop_70{
+		width: 90%;
+	  margin: .25em auto;
+	}
 }
 @media (min-width: 811px) {
 	.desctop_50{	
 		width: 50%;
+		margin: .25em auto;
+	}
+	.desctop_70{	
+		width: 70%;
 	  margin: .25em auto;
 	}
 }
@@ -434,4 +448,7 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 
 .navbar-brand{
 	margin: 0!important;
+}
+.carousel-caption{
+	text-align: left!important;
 }
