@@ -35,6 +35,15 @@
 
   <!-- DESCTOP -->
   <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+
+    <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-start pt-1">
+        <img class ='sm_icon' src='{% static "icons/call.png" %}' />
+        <p class='white_dirty ps-2'>+7 911 7501492</p>
+      </div>
+      <button class='btn_orange'>Заказать звонок</button>
+    </div>
+
       <div class="desctop_84">
         
         <div class="d-flex justify-content-between">
@@ -72,27 +81,42 @@
 
   <!-- PHONE & TABLET -->
   <div class='d-block d-lg-none '>
-    <nav id='nav_mob' class="px-3 pt-2">
+    <div class='orange_bg px-3 py-2'>
+      <div class="d-flex justify-content-between">
+    
+        <div class="d-flex justify-content-start pt-1">
+          <img class ='sm_icon' src='{% static "icons/call.png" %}' />
+          <p class='white_dirty ps-2'>+7 911 7501492</p>
+        </div>
+        <button class='btn_orange'>Заказать звонок</button>
+        
+      </div>
+    </div>
+
+    <nav id='nav_mob' class="px-3 pt-1 orange_so_light_bg">
       <div class="d-flex justify-content-between">
         <div>
           <a class="navbar-brand" href='{% url "main:index" %}'>
             <div class='d-flex'>  
-              <div><img class='logo_mob' src='{% static "img/logo.png" %}'></div>
+              <div>
+                <img class='logo_mob' src='{% static "img/logo.png" %}'>
+              </div>
               <div class="ps-2">
                 <div class="d-flex flex-column">
-                  <p class='gray we_500 logo_mob_text pt-4'>Янтарный </p>
-                  <p class='gray we_500 logo_mob_text'> климат</p>
+                  <p class='brown very_small pt-3'>Надёжные сплит-системы</p>
+                  <p class='orange comfortaa we_500 logo_mob_text pt-1'>ЯНТАРНЫЙ КЛИМАТ</p>
                 </div>
               </div>
             </div>
           </a>
         </div>
+
         <div class='pt-3'>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="add_bg();" onclick="toggleMenuIcon();">
-            <img id="menuIcon" class='menu_icon pt-1' src="{% static 'icons/menu.png' %}">
+            <img id="menuIcon" class='menu_icon pt-1' src="{% static 'icons/menu.svg' %}">
           </button>
-      
         </div>
+
       </div>
 
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -125,12 +149,6 @@
           <hr>
         </ul>
       </div>
-
-      <div class='d-flex justify-content-around pb-3 px-3 gray'>
-        <p class='small logo_mob_text we_500'>Лучшие модели<br>сплит-систем</p>
-        <h3 class='ps-4 major_text we_500'>+7(911)768-29-92</h3>
-      </div>
-
     </nav>
 
   </div>

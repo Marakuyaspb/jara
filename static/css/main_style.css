@@ -18,14 +18,16 @@
   --brown: rgb(66, 52, 49); /* #423431 */
   --gray:rgb(16,27,34); /* #101b22  */
   --gray_light: rgb(213, 205, 192); /* #d5cdc0 */
+  --green: rgb(74, 112, 28); /* #4A701C */
   --orange:rgb(211, 94, 53); /* #d35e35 */
+  --orange_light: rgb(240, 114, 69); /* #F07245 */
   --orange_so_light: rgb(252, 242, 237); /* #fcf2ed */
   --violet:rgb(80, 84, 98);
   --violet_dark:rgb(61, 66, 81);
   --violet_light:rgb(202, 203, 213);
   --brick:rgb(182,97,90);
   --white: rgb(250, 249, 249);
-  --white_dirty: rgb(245, 245, 245);
+  --white_dirty: rgb(245, 245, 245); /* #F5F5F5 */
 }
 
 html{
@@ -93,10 +95,14 @@ td,th {
 	font-size: 1.1em!important;
 }
 .small{
-	font-size: 0.8em;
+	font-size: .8em;
 }
 .smaller{
   font-size: .7em;
+  font-weight: 200;
+}
+.very_small{
+	font-size: .6em;
 }
 .we_200{
     font-weight: 200;
@@ -244,8 +250,40 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 	box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
 }
 
+
+.btn_orange{
+	background-color: var(--orange_light);
+	color: var(--white_dirty);
+	border: none;
+	border-radius: 5px;
+	font-weight: 400;
+	padding: .4em .8em;
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+	box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+}
+
+
+.btn_green{
+	background-color: var(--green);
+	color: var(--white_dirty);
+	border: none;
+	border-radius: 5px;
+	font-weight: 400;
+	padding: .4em .8em;
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+	box-shadow: 4px 4px 8px 0px rgba(61, 66, 81, 0.3);
+}
+
+
 .btn_icon{
 	width: 2.4em;
+}
+
+.sm_icon{
+	width: 1.4em;
+	height: 1.4em;
 }
 
 .vh_100{
@@ -285,12 +323,12 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
   	margin-top: .2em;
 }
 .logo_mob{
-  height: 4.4em;
+  height: 3.4em;
 }
 
 .logo_mob_text{
 	line-height: 1;
-	font-size: 1em;
+	font-size: .8em;
 }
 
 .nav-link{
@@ -312,6 +350,7 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
   margin: .25em auto;
 }
 
+/* DESCTOP */
 @media (max-width: 810px) {
 	.desctop_50{
 		width: 80%;
@@ -321,7 +360,14 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 		width: 90%;
 	  margin: .25em auto;
 	}
+	.info_block{
+		padding: 3rem 0 3rem 1.5rem;
+		margin: .5rem 0 0 0;
+	}
 }
+
+
+/* MOB & TABLET */
 @media (min-width: 811px) {
 	.desctop_50{	
 		width: 50%;
@@ -330,6 +376,11 @@ background: radial-gradient(circle at 10% 20%, rgb(211, 94, 53) 0%, rgb(182,97,9
 	.desctop_70{	
 		width: 70%;
 	  margin: .25em auto;
+	}
+
+	.info_block{
+		padding: 3rem 0 3rem 3rem;
+		margin: .5rem 0 0 0;
 	}
 }
 
