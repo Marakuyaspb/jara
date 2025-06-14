@@ -16,6 +16,7 @@
   --black:rgb(5, 5, 5);
   --blue_light: rgb(154, 182, 194); /* #9ab6c2 */
   --brown: rgb(66, 52, 49); /* #423431 */
+  --brown_dark: rgb(47, 33, 30); /* #2F211E */
   --gray:rgb(16,27,34); /* #101b22  */
   --gray_light: rgb(213, 205, 192); /* #d5cdc0 */
   --green: rgb(74, 112, 28); /* #4A701C */
@@ -153,6 +154,15 @@ td,th {
 .brown_bg{
 	background-color: var(--brown);
 }
+
+
+.brown_dark{
+	color: var(--brown_dark);
+}
+.brown_dark_bg{
+	background-color: var(--brown_dark);
+}
+
 
 .brick{
 	color: var(--brick);

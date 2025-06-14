@@ -1,24 +1,49 @@
 {% load static %}
+<style>
+	.landscape{
+		background-image: url({% static "img/landscape.png" %});
+	}
+
+	.composition{
+		display: block;
+		margin: auto;
+		padding: 3em 0;
+  		width: 84%;
+  		position: relative;
+  		z-index: 10;
+	}
+
+	.hero_h1{
+		font-weight: 600;
+		font-size: 1em!important;
+		width: 86%;
+		position: absolute;
+  		z-index: 5;
+	}
+
+
+</style>
+
 <!-- DESCTOP -->
 <div class='d-none d-lg-block d-xl-block d-xxl-block'>
+	<section>
+	{% include 'main/parts/index_header.html' %}
+	</section>
+
 </div>
 
 <!-- PHONE & TABLET -->
-<div class='d-block d-lg-none '>
+<div class='d-block d-lg-none orange_so_light_bg'>
+	<div class='landscape'>
 
-	<div>
-		<h2>ЛУЧШИЕ СПЛИТ-СИСТЕМЫ САНКТ-ПЕТЕРБУРГА</h2>
-		<img src='{% static "img/" %}'>
-		<h2>ПОМОГАЕМ ВЗЯТЬ КЛИМАТ ПОД КОНТРОЛЬ</h2>
+		<h1 id='best' class="hide">ЛУЧШИЕ СПЛИТ-СИСТЕМЫ САНКТ-ПЕТЕРБУРГА</h2>
+		<h1 id='control' class="hide">ПОМОГАЕМ ВЗЯТЬ КЛИМАТ ПОД КОНТРОЛЬ</h2>
+		
+		<img class='composition' src="{% static 'img/composition_letters.png' %}">
+
+		<div class='d-flex justify-content-center py-3'>
+			<button class='btn_green mx-2'>Чат в WhatsApp</button>
+			<button class='btn_orange mx-2'>В каталог</button>
+		</div>
 	</div>
-
-	<div>
-		<img src='{% static "img/landscape.png" %}'>
-	</div>
-
-	<div>
-		<button class='btn_green'>Чат в WhatsApp</button>
-		<button class='btn_orange'>В каталог</button>
-	</div>
-
 </div>
