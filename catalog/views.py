@@ -27,7 +27,7 @@ def catalog(request):
 		
 	context = {'callme_form': callme_form}
 
-	return render(request, 'catalog.html', context)
+	return render(request, 'catalog/catalog.html', context)
 
 
 def the_product(request, id):
@@ -52,4 +52,4 @@ def the_product(request, id):
 		'want_this_form': want_this_form,
 	}
 
-	return render(request, 'catalog.html', {'callme_form': callme_form})
+	return render(request, 'catalog/catalog.html', {'callme_form': callme_form})
